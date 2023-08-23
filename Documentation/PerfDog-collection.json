@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "52b784fe-e0ba-4eae-ad1e-e308e6495e99",
+		"name": "PerfDog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"id\": 0,\n    \"username\": \"Elvis_M\",\n    \"firstName\": \"Elvis\",\n    \"lastName\": \"Mieles\",\n    \"email\": \"elvismieles@gmail.com\",\n    \"password\": \"mieles123\",\n    \"phone\": \"+573045410190\",\n    \"userStatus\": 0\n  }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user/createWithArray",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"createWithArray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user/login?username=Elvis_M&password=mieles123",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Elvis_M"
+						},
+						{
+							"key": "password",
+							"value": "mieles123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/pet/findByStatus?status=Available",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "Available"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Pet Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/pet?petId=767676",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"pet"
+					],
+					"query": [
+						{
+							"key": "petId",
+							"value": "767676"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 121324243,\n  \"petId\": 13353434345,\n  \"quantity\": 232432,\n  \"shipDate\": \"2023-08-22T23:09:23.794Z\",\n  \"status\": \"placed\",\n  \"complete\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/store/order",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"store",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/user/logout",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
