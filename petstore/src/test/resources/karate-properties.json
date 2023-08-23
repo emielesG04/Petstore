@@ -1,0 +1,13 @@
+{
+"dev": {
+  "url": "https://petstore.swagger.io/v2/",
+  "id": 0,
+  "username": "elvis",
+  "firstName": "Mieles",
+  "lastName": "Guarin",
+  "email": "elvismieles@gmail.com",
+  "password": "mieles123",
+  "phone": "3045410190",
+  "userStatus": 0
+}
+}
