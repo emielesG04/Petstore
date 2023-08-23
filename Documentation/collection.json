@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "[\n  {\n    \"id\": 0,\n    \"username\": \"Elvis_M\",\n    \"firstName\": \"Elvis\",\n    \"lastName\": \"Mieles\",\n    \"email\": \"elvismieles@gmail.com\",\n    \"password\": \"mieles123\",\n    \"phone\": \"+573045410190\",\n    \"userStatus\": 0\n  }\n]",
+					"raw": "{\n  \"id\": 0,\n  \"username\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"userStatus\": 0\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -20,13 +20,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/user/createWithArray",
+					"raw": "{{base_url}}/user",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
-						"user",
-						"createWithArray"
+						"user"
 					]
 				}
 			},
