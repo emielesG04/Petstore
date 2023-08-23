@@ -1,0 +1,12 @@
+<testsuite failures="0" name="Backend/user.feature" skipped="0" tests="1" time="1.173186">
+  <testcase classname="Backend.user" name="check the service  POST Method" time="1.173186">
+    <system-out>* url url ................................................................. passed
+* def requestUser =  { "id": '#(id)', "username": '#(username)', "firstName": '#(firstName)', "lastName": '#(firstName)',"email": '#(email)',"password": '#(password)',"phone": '#(phone)',"userStatus": '#(userStatus)'} . passed
+* def responseGet = read('responseUser.json') ............................. passed
+Given path 'user' ......................................................... passed
+And request requestUser ................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match  response == responseGet ........................................ passed</system-out>
+  </testcase>
+</testsuite>
